@@ -25,7 +25,7 @@
 - git push -u origin aula01
 
 ### Alterar Repositório
-
+- git rm -r --cached .
 - git add .
 - git commit -m "aula 01 - Alterado README.md"
 - git branch -M aula01
