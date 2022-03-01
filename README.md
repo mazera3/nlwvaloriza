@@ -16,7 +16,7 @@
 - yarn dev
 
 ### 1º Repositório
-
+- criar .gitignore
 - git init
 - git add .
 - git commit -m "aula 01"
