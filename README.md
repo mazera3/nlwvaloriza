@@ -29,5 +29,4 @@
 - git add .
 - git commit -m "aula 01 - Alterado README.md"
 - git branch -M aula01
-- git remote add origin git@github.com:mazera3/nlwvaloriza.git
 - git push -u origin aula01
