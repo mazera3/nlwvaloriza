@@ -1,5 +1,6 @@
 <!-- Visualizar: Ctrl + Shift + v -->
 <!-- Icones: https://github.com/shyoutarou/README-Model/blob/master/gistfile1.md -->
+<!--  mazera3/nlwvaloriza: Settings > Branches > Default branch > Switch default branch to another branch -->
 
 <h1 align="center">NLW Valoriza - Aulas 👋 </h1>
 <h1 align="center">
@@ -10,8 +11,8 @@
 
 * Nodejs versão: v16.13.2
 * Yarn versão: 1.22.10
-* Typescript
-* Express
+* Typescript [Typescript](https://www.typescriptlang.org/docs/)
+* Express [Express](https://expressjs.com/pt-br/)
 * ts-node-dev
 * git
 * Type ORM
@@ -128,6 +129,31 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 ### Fluxo
 - server -> controller -> service -> ...
 
+## 🚧 MiddleWares
+- middleware de tratamento de erros: 
+- Função com 4 parâmetros: app.use(err, request, response, next)
+ - err
+ - request
+ - response
+ - next
+- Instalar a biblioteca: yarn add express-async-errors
+- importar express-async-errors antes de router
+
+## CreateTags
+- Cria entidade como nome: CreateTags: yarn typeorm migration:create -n CreateTags
+- Editar a tabela: 1646244129579-CreateTags.ts
+- executar: yarn typeorm migration:run
+- criar entidade Tags: yarn typeorm entity:create -n Tags
+- criar arquivo: repositories/TagsRepositories.ts
+- criar arquivo: controllers/CreateTagController.ts
+- criar rota em routes
+
+- criar pasta/arquivo:: middlewares/ensureAdmin.ts
+- Se não for Admin - Status/401: (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401)
+
+## 🚧 Alterar Repositório para aula 03
+- git add . && git commit -m "aula 03" && git branch -M aula03 && git push -u origin aula03
+
 # Regras Feitas
 
 - Cadastro de usuário
@@ -138,11 +164,11 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 
 - Cadastro de TAG
 
-  [ ] Não é permitido cadastrar mais de uma tag com o mesmo nome
+  [ x ] Não é permitido cadastrar mais de uma tag com o mesmo nome
 
-  [ ] Não é permitido cadastrar tag sem nome
+  [ x ] Não é permitido cadastrar tag sem nome
 
-  [ ] Não é permitido o cadastro por usuários que não sejam administradores
+  [ x ] Não é permitido o cadastro por usuários que não sejam administradores
 
 - Cadastro de elogios
 
