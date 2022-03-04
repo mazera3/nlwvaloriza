@@ -9,7 +9,7 @@ class CreateTagService {
   async execute({ name }: ITagRequest) {
     const tagsRepository = getCustomRepository(TagsRepositories);
 
-    console.log("Nome", name);
+    //console.log("Nome", name);
     // verifica se email esta preenchido corretamente
     if (!name) {
       throw new Error("Name incorrect");

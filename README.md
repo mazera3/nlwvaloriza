@@ -9,22 +9,28 @@
 
 # Tecnologias Utilizadas no Projeto 💻
 
-* Nodejs versão: v16.13.2
-* Yarn versão: 1.22.10
-* Typescript [Typescript](https://www.typescriptlang.org/docs/)
-* Express [Express](https://expressjs.com/pt-br/)
-* ts-node-dev
-* git
-* Type ORM
-* Sqlite3
-* Beekeeper Studio
+- Nodejs versão: v16.13.2
+- Yarn versão: 1.22.10
+- Typescript [Typescript](https://www.typescriptlang.org/docs/)
+- Express [Express](https://expressjs.com/pt-br/)
+- ts-node-dev
+- git
+- Type ORM
+- Sqlite3
+- Beekeeper Studio
 
 ## 🔨 Instalar Beekeeper Studio no Linux [linux - Apt / DEB](https://docs.beekeeperstudio.io/installation/#linux-installation)
+
 ### 🚧 Install our GPG key
+
 wget --quiet -O - https://deb.beekeeperstudio.io/beekeeper.key | sudo apt-key add -
+
 ### add our repo to your apt lists directory
+
 echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
+
 ### Update apt and install
+
 - sudo apt update && sudo apt install beekeeper-studio
 
 # 🏃‍♂️ Primeiros comandos:
@@ -48,6 +54,7 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - yarn dev
 
 ## 🚧 Criar 1º Repositório
+
 - criar .gitignore +> ignora determinados arquivos como `node_modules/`
 - git init
 - git add .
@@ -57,28 +64,34 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - git push -u origin aula01
 
 ## 🚧 Alterar Repositório para aula 02
+
 - git add . && git commit -m "aula 02" && git branch -M aula02 && git push -u origin aula02
 
 ## :question: Métodos da api
 
- :arrow_forward: GET    => Buscar uma informação
- :arrow_forward:  POST   => Inserir (Criar) uma informação
- :arrow_forward:  PUT    => Alterar uma informação
- :arrow_forward:  DELETE => Remover um dado
- :arrow_forward:  PATCH  => Alterar uma informação específica
- 
+:arrow_forward: GET => Buscar uma informação
+
+:arrow_forward: POST => Inserir (Criar) uma informação
+
+:arrow_forward: PUT => Alterar uma informação
+
+:arrow_forward: DELETE => Remover um dado
+
+:arrow_forward: PATCH => Alterar uma informação específica
+
 - app.get('/', (req,res) =>{return res.send("Teste GET!!!");})
 
 ## :question: Tipos de parâmetros
 
-* Ruotes Params => http://localhost:3000/produtos/93129128
-* Query Params => http://localhost:3000/produtos?name=XXX&description=YYYY&outros=...
-* Body Params => No corpo da requisição:
-{"name":"XXX",
-"description": "YYY",
-"outros":"..." }
+- Ruotes Params => http://localhost:3000/produtos/93129128
+- Query Params => http://localhost:3000/produtos?name=XXX&description=YYYY&outros=...
+- Body Params => No corpo da requisição:
+  {"name":"XXX",
+  "description": "YYY",
+  "outros":"..." }
 
 ## :question: Banco de dados
+
 - Nativo: ex: node-postgres: https://node-postgres.com/
 - Knex.js: https://knexjs.org/
 - Sequelize ORM: https://sequelize.org/master/
@@ -86,16 +99,19 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - Prisma ORM: https://www.prisma.io/
 
 ## 🚧 Usando o Type ORM
+
 - yarn add typeorm reflect-metadata sqlite3
 - import "reflect-metadata" em server.ts
 
 ## 🚧 ormconfig.json
+
 - Criar arquivo ormconfig.json com as linhas:
 - "type": "sqlite",
 - "database": "src/database/database.sqlite",
 - "cli": { "migrationsDir": "src/database/migrations", "entitiesDir": "src/entities" }
 
 ## 🚧 Comando TypeORM
+
 - yarn typeorm -help
 - typeorm executa: "ts-node-dev ./node_modules/typeorm/cli.js"
 - Cria entidade como nome: CreateUsers: yarn typeorm migration:create -n CreateUsers
@@ -110,36 +126,43 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - "emitDecoratorMetadata": true,
 - "strictPropertyInitialization": false,
 
-
 ## 🚧 Repositórios
+
 - criar pasta/arquivo: repositories/UsersRepositories.ts
 
 ## 🚧 Services
+
 - criar pasta/arquivo: services/CreateUserService.ts
 
 ## 🚧 Controllers
+
 - criar pasta/arquivo: controllers/CreateUserController.ts
 
 ## 🚧 Controllers
+
 - criar pasta/arquivo: controllers/CreateUserController.ts
 
 ## 🚧 Rotas
+
 - criar arquivo de roras em src: tsroutes.ts
 
 ### Fluxo
+
 - server -> controller -> service -> ...
 
 ## 🚧 MiddleWares
-- middleware de tratamento de erros: 
+
+- middleware de tratamento de erros:
 - Função com 4 parâmetros: app.use(err, request, response, next)
- - err
- - request
- - response
- - next
+- err
+- request
+- response
+- next
 - Instalar a biblioteca: yarn add express-async-errors
 - importar express-async-errors antes de router
 
 ## CreateTags
+
 - Cria entidade como nome: CreateTags: yarn typeorm migration:create -n CreateTags
 - Editar a tabela: 1646244129579-CreateTags.ts
 - executar: yarn typeorm migration:run
@@ -149,10 +172,65 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - criar rota em routes
 
 - criar pasta/arquivo:: middlewares/ensureAdmin.ts
-- Se não for Admin - Status/401: (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401)
+- Se não for Admin - Status/401: [401](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401)
 
-## 🚧 Alterar Repositório para aula 03
-- git add . && git commit -m "aula 03" && git branch -M aula03 && git push -u origin aula03
+# JSON Web Token [jwt](https://jwt.io/)
+
+- Biblioteca: [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
+- Instalação: npm install jsonwebtoken ou yarn add jsonwebtoken
+- Tyipagem: yarn add @types/jsonwebtoken -D
+- [Bcrypt](https://www.npmjs.com/package/bcryptjs): npm install bcryptjs ou yarn add bcryptjs
+- Tyipagem: yarn add @types/bcryptjs -D
+- Criar arquivo: repositories/ComplimentsRepositories.ts e entities/Compliment.ts
+
+## Adicionar nova coluna chamada password ao User:
+
+## 🚧 alterar password em entities, services e controllers
+
+- yarn typeorm migration:create -n AlterUserAddPassweord
+- executar: yarn typeorm migration:run
+- Em entities/User.ts criar a coluna: @Column() password: string;
+- Em services/CreateUserService.ts acrescentar: password
+- Em controllers/CreateUserController.ts acrescentar: password
+
+## 🚧 Authenticate User
+
+- Criar arquivos:
+  - services: AuthenticateUserService.ts
+  - Gerar Key com a string (mazera3eebfmazzola2022) [md5](https://www.md5hashgenerator.com/)
+  - Key gerada: d665ce14ecc982fd0529a7ce3027ac78 (recomenda-se deixar em .env)
+  - controller: AuthenticateUserController.ts
+  - Acrescentar a rota /login em: routes.ts
+
+## 🚧 Elogios
+
+- yarn typeorm migration:create -n CreateCompliments
+- Criar as chaves estrangeiras para as colunas: user_sender, user_receiver, tag_id
+- name: FKTabelaNome
+- referencedTableName: Tabela (referencia a qual tabela?)
+- referencedColumnNames: Coluna (referencia a qwual coluna?)
+- columnNames: Coluna (da tabela atual)
+- onDelete: seta com null caso a referencia seja excluida.
+- onUpdate: seta com null
+  { 
+  name: "FKTagCompliments", 
+  referencedTableName: "tags",
+  referencedColumnNames: ["id"],
+  columnNames: ["tag_id"],
+  onDelete: "SET NULL",
+  onUpdate: "SET NULL",
+  }
+- executar: yarn typeorm migration:run
+
+- Criar arquivos:
+  - entities/Compliment.ts
+  - repositories/ComplimentsRepositories.ts
+  - services/CreateComplimentService.ts
+  - controllers/CreateComplimentController.ts
+
+## 🚧 Alterar Repositório para aula 04
+
+- git add . && git commit -m "aula 04" && git branch -M aula04 && git push -u origin aula04
 
 # Regras Feitas
 
@@ -172,8 +250,8 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 
 - Cadastro de elogios
 
-  [ ] Não é permitido um usuário cadastrar um elogio para si
+  [ x ] Não é permitido um usuário cadastrar um elogio para si
 
-  [ ] Não é permitido cadastrar elogios para usuários inválidos
+  [ x ] Não é permitido cadastrar elogios para usuários inválidos
 
-  [ ] O usuário precisa estar autenticado na aplicação
+  [ x ] O usuário precisa estar autenticado na aplicação
