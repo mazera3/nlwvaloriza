@@ -4,7 +4,7 @@
 
 <h1 align="center">NLW Valoriza - Aulas 👋 </h1>
 <h1 align="center">
- <img alt="NLW Valoriza" height="100" title="" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" />
+ <img alt="NLW Valoriza" height="40" title="" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" />
 </h1>
 
 # Tecnologias Utilizadas no Projeto 💻
