@@ -288,6 +288,8 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 
 ## ENV
 - yarn add env
+- git rm .env.local --cached
+- git rm .env --cached
 
 # Árvore de diretórios
 <pre>
