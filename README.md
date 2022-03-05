@@ -255,3 +255,73 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
   [ x ] Não é permitido cadastrar elogios para usuários inválidos
 
   [ x ] O usuário precisa estar autenticado na aplicação
+  
+# Arvore de diretórios
+- Gerado com (<img alt="File Tree to Text Generator" height="100" title="File Tree to Text Generator" src="https://github.com/mazera3/nlwvaloriza/tree/aula04/img/FileTreetoTextGenerator.png" />)[File Tree to Text Generator](https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator)
+
+# Ultima aula
+## ensureAuthenticated
+- Criar arquivo: middlewares/ensureAuthenticated.ts
+- Criar pasta/arquivo: @types/express/index.d.ts
+- Alterar tsconfig.json
+  - "typeRoots": ["./src/@types"],
+## Compliments
+- Criar services/ListUserReceiveComplimentsService.ts
+- Criar services/ListUserSendComplimentsService.ts
+- Criar controllers/ListUserReceiveComplimentsController.ts
+- Criar controllers/ListUserSendComplimentsController.ts
+- Criar rotas: routes.ts
+## Tags
+- Criar services/ListTagsService.ts
+- Criar controllers/ListTagsController.ts
+- Criar rotas: routes.ts
+- Instalar: yarn add class-transformer@v0.4.0 (ultima versão não funciona)
+## Usuários
+- Criar services/ListUsersService.ts
+- Criar controllers/ListUsersController.ts
+- Criar rotas: routes.ts
+
+# Árvore de diretórios
+src/
+┣ @types/
+┃ ┗ express/
+┃   ┗ index.d.ts
+┣ controllers/
+┃ ┣ AuthenticateUserController.ts
+┃ ┣ CreateComplimentController.ts
+┃ ┣ CreateTagController.ts
+┃ ┣ CreateUserController.ts
+┃ ┣ ListTagsController.ts
+┃ ┣ ListUserReceiveComplimentsController.ts
+┃ ┣ ListUserSendComplimentsController.ts
+┃ ┗ ListUsersController.ts
+┣ database/
+┃ ┣ migrations/
+┃ ┃ ┣ 1646224012275-CreateUsers.ts
+┃ ┃ ┣ 1646244129579-CreateTags.ts
+┃ ┃ ┣ 1646311462095-AlterUserAddPassweord.ts
+┃ ┃ ┗ 1646317282186-CreateCompliments.ts
+┃ ┣ database.sqlite
+┃ ┗ index.ts
+┣ entities/
+┃ ┣ Compliment.ts
+┃ ┣ Tag.ts
+┃ ┗ User.ts
+┣ middlewares/
+┃ ┣ ensureAdmin.ts
+┃ ┗ ensureAuthenticated.ts
+┣ repositories/
+┃ ┣ ComplimentsRepositories.ts
+┃ ┣ TagsRepositories.ts
+┃ ┗ UsersRepositories.ts
+┣ services/
+┃ ┣ AuthenticateUserService.ts
+┃ ┣ CreateComplimentService.ts
+┃ ┣ CreateTagService.ts
+┃ ┣ CreateUserService.ts
+┃ ┣ ListTagsService.ts
+┃ ┣ ListUserReceiveComplimentsService.ts
+┃ ┣ ListUserSendComplimentsService.ts
+┃ ┗ ListUsersService.ts
+┣ routes.ts
+┗ server.ts
