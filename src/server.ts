@@ -1,12 +1,18 @@
 import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors"; // importar antes de router
+import cors from 'cors';
 
 import { router } from "./routes";
 
 import './database'
 
 const app = express();
+
+// qualquer front-end pode receber requisições
+app.use(cors({
+  origin: "*"
+}))
 
 app.use(express.json());
 

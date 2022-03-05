@@ -198,7 +198,7 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - Criar arquivos:
   - services: AuthenticateUserService.ts
   - Gerar Key com a string (mazera3eebfmazzola2022) [md5](https://www.md5hashgenerator.com/)
-  - Key gerada: d665ce14ecc982fd0529a7ce3027ac78 (recomenda-se deixar em .env)
+  - Key gerada: d665ce14ecc982fd0529a7ce3027ac78 (recomenda-se deixar em .env) (process.env.KEY_TOKEN)
   - controller: AuthenticateUserController.ts
   - Acrescentar a rota /login em: routes.ts
 
@@ -257,7 +257,7 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
   [ x ] O usuário precisa estar autenticado na aplicação
   
 # Arvore de diretórios
-- Gerado com (<img alt="File Tree to Text Generator" height="100" title="File Tree to Text Generator" src="https://github.com/mazera3/nlwvaloriza/tree/aula04/img/FileTreetoTextGenerator.png" />)[File Tree to Text Generator](https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator)
+- Gerado com (<img alt="File Tree to Text Generator" height="100" title="File Tree to Text Generator" src="https://github.com/mazera3/nlwvaloriza/blob/main/img/FileTreetoTextGenerator.png" />)[File Tree to Text Generator](https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator)
 
 # Ultima aula
 ## ensureAuthenticated
@@ -281,7 +281,16 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
 - Criar controllers/ListUsersController.ts
 - Criar rotas: routes.ts
 
+## Fron-end
+- Instalar cors:
+  - yarn add cors
+  - yarn add @types/cors -D
+
+## ENV
+- yarn add env
+
 # Árvore de diretórios
+<pre>
 src/
 ┣ @types/
 ┃ ┗ express/
@@ -325,3 +334,8 @@ src/
 ┃ ┗ ListUsersService.ts
 ┣ routes.ts
 ┗ server.ts
+</pre>
+
+## 🚧 Alterar Repositório para MAIN
+
+- git add . && git commit -m "Master" && git branch -M main && git push -u origin main

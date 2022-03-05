@@ -27,8 +27,7 @@ export function ensureAuthenticated(
     // Validar se token é válido
     const { sub } = verify(
       //const decode = verify(
-      token,
-      "d665ce14ecc982fd0529a7ce3027ac78" // chave de AuthenticateUserService.ts
+      token, process.env.KEY_TOKEN // chave de AuthenticateUserService.ts
     ) as IPayload;
     
     // Recuperar informações do usuário

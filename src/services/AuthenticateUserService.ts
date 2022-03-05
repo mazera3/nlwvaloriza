@@ -36,7 +36,7 @@ class AuthenticateUserService {
       {
         email: user.email,
       },
-      "d665ce14ecc982fd0529a7ce3027ac78",
+      process.env.KEY_TOKEN,
       {
         subject: user.id, // id do usuario
         expiresIn: "1d", // tempo de expiração de 1 dia.
