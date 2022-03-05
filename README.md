@@ -228,9 +228,9 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
   - services/CreateComplimentService.ts
   - controllers/CreateComplimentController.ts
 
-## 🚧 Alterar Repositório para aula 04
+## 🚧 Alterar Repositório para aula 05
 
-- git add . && git commit -m "aula 04" && git branch -M aula04 && git push -u origin aula04
+- git add . && git commit -m "aula 05" && git branch -M aula05 && git push -u origin aula05
 
 # Regras Feitas
 
