@@ -4,7 +4,7 @@
 
 <h1 align="center">NLW Valoriza - Aulas 👋 </h1>
 <h1 align="center">
- <img alt="NLW Valoriza" height="40" title="" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" />
+ <img alt="NLW Valoriza" height="100" title="" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" />
 </h1>
 
 # Tecnologias Utilizadas no Projeto 💻
@@ -257,7 +257,7 @@ echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/source
   [ x ] O usuário precisa estar autenticado na aplicação
   
 # Arvore de diretórios
-- Gerado com (<img alt="File Tree to Text Generator" height="100" title="File Tree to Text Generator" src="https://github.com/mazera3/nlwvaloriza/blob/main/img/FileTreetoTextGenerator.png" />)[File Tree to Text Generator](https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator)
+- Gerado com (<img alt="File Tree to Text Generator" height="30" title="File Tree to Text Generator" src="https://github.com/mazera3/nlwvaloriza/blob/main/img/FileTreetoTextGenerator.png" />)[File Tree to Text Generator](https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator)
 
 # Ultima aula
 ## ensureAuthenticated
